@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      href="/images/favicon.ico"
+      type="image/x-icon"
+      sizes="32x32"
+    />
+
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+
+    <title>Chat | Groq</title>
+  </head>
+  <body>
+    <div
+      class="main w-full h-screen flex text-white items-center gap-[18vw] px-2 bg-slate-950"
+    >
+      <div class="chat-history w-56 h-screen bg-slate-900">
+        currently no chat-history save!!
+      </div>
+
+      <nav
+        class="w-[80%] h-16 fixed flex items-center justify-between top-0 left-[18%] py-3 px-5 bg-slate-950"
+      >
+        <div class="model-selector">
+          <select
+            name="model"
+            id="model-selector"
+            class="bg-slate-950 outline-none rounded-md py-2 px-3 font-medium cursor-pointer"
+          >
+            <option value="llama3-8b-8192">Default llama3-8b-8192</option>
+            <option value="llama3-70b-8192">llama3-70b-8192</option>
+            <option value="gemma-7b-it">gemma-7b-it</option>
+            <option value="mixtral-8x7b-32768">mixtral-8x7b-32768</option>
+          </select>
+        </div>
+        <div class="user-tab">
+          <div
+            class="user-icon w-[2.5vw] h-[2.5vw] py-2 px-3 flex items-center justify-center rounded-full overflow-hidden bg-cyan-800 text-white cursor-pointer"
+          >
+            AK
+          </div>
+        </div>
+
+        <div
+          class="actions fixed top-[8%] w-[20vw] h-[12vw] px-3 py-2 bg-slate-950 rounded-[23px] border-[1px] border-white"
+        >
+          <button
+            class="hover:bg-cyan-800 w-full py-2 px-3 flex justify-start font-medium rounded-[8px]"
+          >
+            Settings
+          </button>
+          <button
+            class="hover:bg-cyan-800 w-full py-2 px-3 flex justify-start font-medium rounded-[8px]"
+          >
+            Log Out
+          </button>
+        </div>
+      </nav>
+
+      <div
+        id="response-section"
+        class="chat-section w-1/2 h-screen py-[10vw] overflow-y-auto bg-slate-950"
+      >
+        <img
+          src="/images/favicon.ico"
+          alt="logo"
+          class="absolute left-[56%] top-[40%] font-medium text-base"
+        />
+        <h1 class="absolute left-[50%] top-[50%] font-medium text-xl">
+          How can i Help you Today?
+        </h1>
+      </div>
+
+      <div
+        class="ask-section w-[75%] h-16 fixed bottom-0 left-[20%] px-[10vw] bg-slate-950"
+      >
+        <form id="question-form">
+          <input
+            id="question-input"
+            class="outline-none relative rounded-full bg-slate-900 w-[100%] py-3 px-5"
+            type="text"
+            name="question"
+            placeholder="Ask Anything"
+            autocomplete="off"
+          />
+
+          <button
+            id="submit-button"
+            class="absolute w-[2.5vw] h-[2.5vw] rounded-full text-black top-2 right-[14%]"
+            type="submit"
+          >
+            <i class="ri-send-plane-2-fill text-[1.2vw]"></i>
+          </button>
+        </form>
+
+        <div class="note px-[15vw] text-zinc-500 text-[12px] font-medium">
+          <h5>Groq can make mistakes. Check important info.</h5>
+        </div>
+      </div>
+    </div>
+
+    <script src="/javascripts/script.js"></script>
+  </body>
+</html>

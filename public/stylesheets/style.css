@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::selection {
+  background: #ffffff;
+  color: #000000;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#model-selector:hover {
+  box-shadow: #ffffff 0px 0px 8px 8px;
+}
+.user-icon:hover {
+  box-shadow: #ffffff 0px 0px 8px 8px;
+}
+.actions {
+  transition: all ease-in-out 0.1s;
+  right: -90%;
+  transform: scale(0);
+}
+.chat-section::-webkit-scrollbar {
+  width: 0px;
+}
+
+#submit-button {
+  background-color: #555454;
+  transition: background-color 0.3s ease;
+}
+#submit-button.active {
+  background-color: white;
+}
